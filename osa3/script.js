@@ -32,6 +32,7 @@ console.log(tervehdi("Aino", "de"));  // Hei, Aino!
 
 // Tehtävä 3 html lang -arvon mukaan
 
+/*
 const tervehdykset = {
   fi: "Hei",
   en: "Hello",
@@ -46,3 +47,21 @@ const tervehdi = (nimi, kieli = document.documentElement.lang) => {
 };
 
 console.log(tervehdi("Aino"));        // käyttää sivun lang-arvoa
+*/
+
+// 3 selaimen kielen mukaan
+
+const tervehdykset = {
+  fi: "Hei",
+  en: "Hello",
+  sv: "Hej",
+};
+
+const tervehdi = (nimi, kieli = navigator.language) => {
+  const koodi = kieli.slice(0, 2).toLowerCase();
+  const sana = tervehdykset[koodi] ?? tervehdykset.fi;
+  return `${sana}, ${nimi}!`;
+};
+
+console.log(navigator.language); // esim. "fi-FI"
+console.log(tervehdi("Aino"));   // Hei, Aino!
