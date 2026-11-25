@@ -9,3 +9,6 @@ const arvosana = (pisteet) => {
     if(pisteet<50)
     return 0;
 };
+// Testataan arvosana-funktiota arvolla 49
+// Kokeile miten saat if elset muille arvosanoille
+console.log((arvosana(49)));
