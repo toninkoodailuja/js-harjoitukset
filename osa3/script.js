@@ -4,3 +4,8 @@ console.log(celsiusFahrenheitiksi(-20.0));
 // Sama arvolle 25, paljonko tuli?
 
 // Tehtävä 2: Arvosana
+// Voisiko olla esim. näin?
+const arvosana = (pisteet) => {
+    if(pisteet<50)
+    return 0;
+};
